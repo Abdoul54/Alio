@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f8f8;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #000;
+  font-family: 'Poppins', sans-serif;
+}
+h2::before {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+input,
+textarea,
+select {
+  border: 1px solid #ccc;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border: 2px solid #743ae1;
+}
+
+input[type="date"] {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  color: #000;
+  width: 100%;
+  box-sizing: border-box;
+  height: 40px;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.full-width {
+  grid-column: span 2;
+}
+
+button {
+  background-color: #ececec;
+  justify-self: center;
+  border: none;
+  padding: 10px 20px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  height: 45px;
+  transition: .4s;
+}
+
+button:hover {
+  background-color: #255f9ce6;
+}
+
+button {
+  margin-top: 20px;
+}
+
+
+@media (max-width: 768px) {
+  main {
+    padding: 10px;
+  }
+  
+  form {
+    grid-template-columns: 1fr;
+  }
+  
+  input,
+  textarea,
+  select {
+    margin-bottom: 10px;
+    grid-column: span 2;
+  }
+
+
+  button {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  input,
+  textarea,
+  select {
+    grid-column: span 2;
+  }
+  
+  button {
+    font-size: 14px;
+    height: 40px;
+    padding: 10px;
+  }
+}
